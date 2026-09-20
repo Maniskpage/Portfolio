@@ -1,106 +1,144 @@
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../components/SectionWrapper';
+import { SectionHeading } from '../components/SectionHeading';
+import { SpotlightCard } from '../components/SpotlightCard';
 import { experiences, education } from '../data/portfolio';
+import { Briefcase, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
+
+const certifications = [
+  'Product Engineer Internship Certificate — Fintechy',
+  'Web Design Internship Certificate — Quantanics TechServ Pvt Ltd',
+];
 
 export function Experience() {
   return (
     <SectionWrapper id="experience">
-      <p className="font-mono text-xs text-accent uppercase tracking-widest mb-4">Background</p>
-      <h2 className="font-display font-bold text-4xl md:text-5xl leading-tight tracking-tight mb-12">
-        Experience & Education
-      </h2>
+      <SectionHeading
+        tag="Career & Education"
+        title="Experience & academic background"
+        description="My journey through product engineering internships, core education, and professional credentials."
+      />
 
-      <div className="grid md:grid-cols-2 gap-16">
-        {/* Work Experience */}
-        <div>
-          <h3 className="font-display font-semibold text-xl mb-8 text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
-            <span className="w-8 h-px bg-accent" />
-            Work
-          </h3>
-          <div className="relative space-y-0">
-            <div className="absolute left-0 top-2 bottom-2 w-px bg-zinc-200 dark:bg-zinc-800" />
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        {/* Work Experience (Span 7 on lg) */}
+        <div className="lg:col-span-7">
+          <div className="flex items-center gap-2 mb-8">
+            <span className="p-2 rounded-lg bg-accent/10 text-accent">
+              <Briefcase size={18} />
+            </span>
+            <h3 className="font-display font-bold text-xl text-zinc-900 dark:text-zinc-100">
+              Work Experience
+            </h3>
+          </div>
+
+          <div className="relative pl-6 sm:pl-8 space-y-10">
+            {/* Illuminated vertical line */}
+            <div className="absolute left-[7px] sm:left-[9px] top-3 bottom-3 w-[2px] bg-gradient-to-b from-accent via-accent/40 to-transparent" />
 
             {experiences.map((exp, i) => (
               <motion.div
                 key={exp.company}
-                initial={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="relative pl-8 pb-10 last:pb-0"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                className="relative group"
               >
-                <div className="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-accent border-2 border-surface-light dark:border-surface-dark" />
-                <div className="flex flex-col gap-1 mb-2">
-                  <span className="font-mono text-xs text-zinc-400 dark:text-zinc-500">
-                    {exp.period}
-                  </span>
-                  <h4 className="font-display font-semibold text-base text-zinc-900 dark:text-zinc-100">
+                {/* Glowing milestone node */}
+                <div className="absolute -left-[29px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#08090A] border-2 border-accent flex items-center justify-center group-hover:scale-125 transition-transform shadow-cyan-glow-sm">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                </div>
+
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0F1117] border border-zinc-200/80 dark:border-[#1E222D] group-hover:border-accent/40 transition-colors">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-accent/10 text-accent border border-accent/20">
+                      {exp.period}
+                    </span>
+                    <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">
+                      {exp.company}
+                    </span>
+                  </div>
+
+                  <h4 className="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
                     {exp.role}
                   </h4>
-                  <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                    {exp.company}
-                  </span>
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    {exp.description}
+                  </p>
                 </div>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500 leading-relaxed">
-                  {exp.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Education + Certs */}
-        <div>
-          <h3 className="font-display font-semibold text-xl mb-8 text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
-            <span className="w-8 h-px bg-accent" />
-            Education
-          </h3>
-          <div className="relative">
-            <div className="absolute left-0 top-2 bottom-2 w-px bg-zinc-200 dark:bg-zinc-800" />
+        {/* Education & Certifications (Span 5 on lg) */}
+        <div className="lg:col-span-5 space-y-8">
+          {/* Education */}
+          <div>
+            <div className="flex items-center gap-2 mb-6">
+              <span className="p-2 rounded-lg bg-accent/10 text-accent">
+                <GraduationCap size={18} />
+              </span>
+              <h3 className="font-display font-bold text-xl text-zinc-900 dark:text-zinc-100">
+                Education
+              </h3>
+            </div>
+
             {education.map((edu, i) => (
               <motion.div
                 key={edu.institution}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="relative pl-8"
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0F1117] border border-zinc-200/80 dark:border-[#1E222D]"
               >
-                <div className="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-accent border-2 border-surface-light dark:border-surface-dark" />
-                <span className="font-mono text-xs text-zinc-400 dark:text-zinc-500">
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
                   {edu.period}
                 </span>
-                <h4 className="font-display font-semibold text-base text-zinc-900 dark:text-zinc-100 mt-1">
+
+                <h4 className="font-display font-bold text-base text-zinc-900 dark:text-zinc-100 mt-3 mb-1">
                   {edu.degree}
                 </h4>
-                <span className="text-sm text-zinc-500 dark:text-zinc-400">{edu.institution}</span>
+
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">{edu.institution}</p>
               </motion.div>
             ))}
-
-            {/* Certifications */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-10 p-5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl"
-            >
-              <p className="font-display font-semibold text-base mb-3 text-zinc-900 dark:text-zinc-100">
-                Certifications
-              </p>
-              <ul className="space-y-2">
-                {[
-                  'Product Engineer Internship Certificate – Fintechy',
-                  'Web Design Internship Certificate – Quantanics TechServ Pvt Ltd',
-                ].map((cert) => (
-                  <li key={cert} className="flex items-start gap-2 text-sm text-zinc-400 dark:text-zinc-500">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                    {cert}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
           </div>
+
+          {/* Certifications */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <SpotlightCard className="p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="p-2 rounded-lg bg-accent/10 text-accent">
+                  <Award size={18} />
+                </span>
+                <h4 className="font-display font-bold text-base text-zinc-900 dark:text-zinc-100">
+                  Certifications & Verified Credentials
+                </h4>
+              </div>
+
+              <div className="space-y-3">
+                {certifications.map((cert) => (
+                  <div
+                    key={cert}
+                    className="flex items-start gap-3 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/60 dark:border-zinc-700/60"
+                  >
+                    <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
+                    <span className="text-xs font-mono text-zinc-700 dark:text-zinc-300 leading-snug">
+                      {cert}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </SpotlightCard>
+          </motion.div>
         </div>
       </div>
     </SectionWrapper>

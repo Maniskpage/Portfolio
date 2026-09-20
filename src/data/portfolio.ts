@@ -26,35 +26,62 @@ export const projects: Project[] = [
     id: 1,
     title: 'InvoiceFlow — SaaS Invoice Platform',
     description:
-      'A production-grade, multi-tenant invoice generation SaaS application built end-to-end. Supports customer creation, invoice generation with one-click PDF export branded with your company logo (configurable via Company Settings). Features Razorpay-integrated subscription plans, secure JWT-based auth with refresh token rotation, password reset via email OTP, and strict multi-tenant data isolation — designed to the standards of a real-world production application.',
-    tech: ['React', 'TypeScript', 'Ant Design', 'Tailwind CSS', 'Spring Boot', 'MongoDB', 'Razorpay', 'JWT'],
+      'A production-grade, multi-tenant invoice SaaS supporting automated PDF exports with custom company branding, Razorpay subscription billing, JWT auth with refresh token rotation, and isolated tenant databases.',
+    tech: ['React', 'TypeScript', 'Spring Boot', 'Tailwind CSS', 'MongoDB', 'Razorpay', 'JWT'],
     github: '',
-    live: import.meta.env.VITE_INVOICE_LIVE_URL,
+    live: import.meta.env.VITE_INVOICE_LIVE_URL || '',
     featured: true,
   },
   {
     id: 2,
-    title: 'ResumeLens — AI Resume Reviewer',
+    title: 'Deed Manager — Legal Registration & Workflow SaaS',
     description:
-      'An AI-powered resume analysis tool that leverages GPT-4.1 via the OpenRouter API to deliver detailed, actionable improvement suggestions. Built with a Spring Boot backend exposing clean RESTful APIs, containerized using multi-stage Docker builds for lean production images and CI/CD compatibility, and deployed to Render with secure environment-based API key management. Integrates structured JSON payloads, HTTP headers, and token handling for reliable, scalable AI communication.',
-    tech: ['Spring Boot', 'Java', 'GPT-4.1', 'OpenRouter API', 'Docker', 'Maven', 'REST APIs', 'Render'],
-    github: import.meta.env.VITE_GITHUB_RESUMEAI,
-    live: import.meta.env.VITE_AI_RESUME_URL,
-    featured: true,
+      'A full-stack workflow SaaS for document writers & advocates across Tamil Nadu. Features a 7-stage Kanban case engine, automated bilingual deed draft generation with docxtemplater, 38-district property registry, and WhatsApp automation.',
+    tech: ['React 18', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Ant Design', '@hello-pangea/dnd', 'docxtemplater'],
+    github: '',
+    live: '',
+    featured: false,
   },
   {
-  id: 3,
-  title: 'E-Commerce & Finance Modules',
-  description:
-    'Two production-grade backend and frontend systems: an E-Commerce microservices platform with Order, Payment, Inventory, and Notification services using Spring WebFlux for non-blocking inter-service communication; and an AP & AR finance automation module built at Fintechy with multi-step invoice workflows, REST API integration, and React Virtuoso-powered rendering for large financial datasets.',
-  tech: ['Spring Boot', 'Spring WebFlux', 'React.js', 'Ant Design', 'REST APIs', 'MongoDB', 'Java', 'TypeScript'],
-  github: import.meta.env.VITE_GITHUB_WEBFLUX,
-  live: '',
-  featured: false,
- }
+    id: 3,
+    title: 'Real-Time CRM Call Logger — Native Android & MERN Sync',
+    description:
+      'An automated call-tracking bridge connecting native Android dialers to a MERN CRM. Uses Capacitor & Kotlin BroadcastReceivers with WorkManager for background sync, automated lead matching, and auto-scheduling follow-ups.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Kotlin', 'Capacitor', 'Android WorkManager'],
+    github: '',
+    live: '',
+    featured: false,
+  },
+  {
+    id: 4,
+    title: 'ResumeLens — AI Resume Reviewer',
+    description:
+      'An AI-powered resume analysis engine integrating GPT-4.1 via OpenRouter API with structured feedback prompts. Containerized with multi-stage Docker builds and deployed to Render with Spring Boot REST APIs.',
+    tech: ['Spring Boot', 'Java', 'GPT-4.1', 'Docker', 'OpenRouter API', 'REST APIs', 'Render'],
+    github: import.meta.env.VITE_GITHUB_RESUMEAI || '',
+    live: import.meta.env.VITE_AI_RESUME_URL || '',
+    featured: false,
+  },
+  {
+    id: 5,
+    title: 'E-Commerce & Finance Microservices',
+    description:
+      'Production-grade microservices and financial automation platform: non-blocking inter-service communication with Spring WebFlux, and AP/AR invoice workflows with React Virtuoso rendering large financial datasets.',
+    tech: ['Spring Boot', 'Spring WebFlux', 'React.js', 'Ant Design', 'MongoDB', 'Java', 'TypeScript'],
+    github: import.meta.env.VITE_GITHUB_WEBFLUX || '',
+    live: '',
+    featured: false,
+  },
 ];
 
 export const experiences: Experience[] = [
+  {
+    role: 'Full Stack Engineer',
+    company: 'Jaivexa',
+    period: 'Present',
+    description:
+      'Architecting and developing full-stack web applications and SaaS solutions. Engineering responsive, high-performance user interfaces with React and TypeScript, alongside resilient backend APIs, databases, and microservices.',
+  },
   {
     role: 'Product Engineer Intern',
     company: 'Fintechy',
