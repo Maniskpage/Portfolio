@@ -109,15 +109,15 @@ export function About() {
           </div>
 
           <h4 className="font-display font-bold text-xl text-zinc-900 dark:text-zinc-100 mb-2">
-            Microservices & Async Backends
+            Microservices, MERN & Backend Systems
           </h4>
           <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
-            Architecting decoupled services with Spring Boot, Spring WebFlux for reactive non-blocking
+            Architecting decoupled services with Node.js, Express, Spring Boot, Spring WebFlux for reactive non-blocking
             I/O, Spring Data JPA, JWT authentication with token rotation, and MongoDB / MySQL databases.
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {['Spring Boot', 'Spring WebFlux', 'MongoDB', 'MySQL', 'JWT Auth', 'RESTful APIs'].map(
+            {['Node.js', 'Express.js', 'MERN Stack', 'Spring Boot', 'Spring WebFlux', 'MongoDB', 'MySQL', 'JWT Auth', 'RESTful APIs'].map(
               (tag) => (
                 <span
                   key={tag}

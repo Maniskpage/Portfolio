@@ -102,21 +102,22 @@ export const education: Education[] = [
   {
     degree: 'B.E. Electronics and Communication Engineering (78%)',
     institution: 'Sethu Institute of Technology',
-    period: 'Aug 2021 — May 2025',
+    period: 'Aug 2021 — Apr 2025',
   },
 ];
 
 export const skills = {
   Frontend: [
     'React.js', 'TypeScript', 'JavaScript', 'Ant Design',
-    'Tailwind CSS', 'HTML', 'CSS', 'React Virtuoso',
+    'Tailwind CSS', 'HTML5', 'CSS3', 'React Virtuoso',
   ],
   Backend: [
-    'Spring Boot', 'Spring WebFlux', 'REST APIs', 'Spring Data JPA',
-    'Java (8+)', 'Microservices', 'Maven', 'Collections & Streams',
+    'Node.js', 'Express.js', 'MERN Stack', 'Spring Boot',
+    'Spring WebFlux', 'REST APIs', 'Spring Data JPA', 'Java (8+)',
+    'Microservices', 'Maven',
   ],
   Tools: [
-    'Git', 'GitHub', 'Postman', 'MySQL',
-    'MongoDB', 'Razorpay', 'JWT Auth', 'Swagger',
+    'MongoDB', 'MySQL', 'Git', 'GitHub',
+    'Postman', 'Docker', 'Razorpay', 'JWT Auth', 'Swagger',
   ],
 };

@@ -122,6 +122,9 @@ export function Hero() {
               React.js
             </span>
             <span className="px-2.5 py-0.5 rounded-md bg-accent/10 border border-accent/25 text-accent font-medium text-xs sm:text-sm">
+              Node.js / Express
+            </span>
+            <span className="px-2.5 py-0.5 rounded-md bg-accent/10 border border-accent/25 text-accent font-medium text-xs sm:text-sm">
               Spring Boot
             </span>
             <span className="px-2.5 py-0.5 rounded-md bg-accent/10 border border-accent/25 text-accent font-medium text-xs sm:text-sm">
