@@ -88,7 +88,7 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               <span className="text-xs font-mono font-medium text-zinc-700 dark:text-zinc-300">
-                Full Stack Engineer @ Jaivexa • Open to opportunities
+                Full Stack Developer @ Akodefy Infotech • Open to opportunities
               </span>
             </div>
           </motion.div>

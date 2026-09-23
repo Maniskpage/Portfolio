@@ -5,9 +5,11 @@ import { SpotlightCard } from '../components/SpotlightCard';
 import { experiences, education } from '../data/portfolio';
 import { Briefcase, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
 
-const certifications = [
-  'Product Engineer Internship Certificate — Fintechy',
-  'Web Design Internship Certificate — Quantanics TechServ Pvt Ltd',
+const credentials = [
+  'Full Stack Web & Mobile Engineering — Akodefy Infotech',
+  'Multi-Tenant SaaS Architecture & GST Invoicing — Finvo Platform',
+  '200+ DSA Problems Solved — LeetCode & GeeksforGeeks',
+  'Reactive Backend Systems & Microservices — Spring Boot & WebFlux',
 ];
 
 export function Experience() {
@@ -16,7 +18,7 @@ export function Experience() {
       <SectionHeading
         tag="Career & Education"
         title="Experience & academic background"
-        description="My journey through product engineering internships, core education, and professional credentials."
+        description="My journey through full-stack web and mobile engineering, production hosting, and academic background."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -59,13 +61,30 @@ export function Experience() {
                     </span>
                   </div>
 
-                  <h4 className="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+                  <h4 className="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100 mb-1">
                     {exp.role}
                   </h4>
 
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  {exp.tagline && (
+                    <p className="text-xs font-mono text-accent dark:text-accent font-medium mb-3">
+                      {exp.tagline}
+                    </p>
+                  )}
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
                     {exp.description}
                   </p>
+
+                  {exp.highlights && exp.highlights.length > 0 && (
+                    <ul className="space-y-2.5 pt-4 border-t border-zinc-100 dark:border-[#1E222D]">
+                      {exp.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -107,7 +126,7 @@ export function Experience() {
             ))}
           </div>
 
-          {/* Certifications */}
+          {/* Key Competencies & Highlights */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -120,19 +139,19 @@ export function Experience() {
                   <Award size={18} />
                 </span>
                 <h4 className="font-display font-bold text-base text-zinc-900 dark:text-zinc-100">
-                  Certifications & Verified Credentials
+                  Key Competencies & Highlights
                 </h4>
               </div>
 
               <div className="space-y-3">
-                {certifications.map((cert) => (
+                {credentials.map((cred) => (
                   <div
-                    key={cert}
+                    key={cred}
                     className="flex items-start gap-3 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/60 dark:border-zinc-700/60"
                   >
                     <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
                     <span className="text-xs font-mono text-zinc-700 dark:text-zinc-300 leading-snug">
-                      {cert}
+                      {cred}
                     </span>
                   </div>
                 ))}

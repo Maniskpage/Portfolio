@@ -112,7 +112,7 @@ export function Contact() {
               </h4>
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Currently working as a <span className="text-zinc-900 dark:text-zinc-200 font-semibold">Full Stack Engineer at Jaivexa</span>. Open to technical discussions, consulting, and high-impact engineering opportunities.
+              Currently working as a <span className="text-zinc-900 dark:text-zinc-200 font-semibold">Full Stack Developer at Akodefy Infotech</span>. Open to technical discussions, consulting, and high-impact engineering opportunities.
             </p>
           </SpotlightCard>
 

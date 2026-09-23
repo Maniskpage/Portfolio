@@ -12,7 +12,9 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
+  tagline?: string;
   description: string;
+  highlights?: string[];
 }
 
 export interface Education {
@@ -76,25 +78,22 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    role: 'Full Stack Engineer',
-    company: 'Jaivexa',
-    period: 'Present',
+    role: 'Full Stack Developer',
+    company: 'Akodefy Infotech',
+    period: '2 Years – Present',
+    tagline: 'Full Stack Web & Mobile Development · Deployment · Hosting',
     description:
-      'Architecting and developing full-stack web applications and SaaS solutions. Engineering responsive, high-performance user interfaces with React and TypeScript, alongside resilient backend APIs, databases, and microservices.',
-  },
-  {
-    role: 'Product Engineer Intern',
-    company: 'Fintechy',
-    period: 'Jul 2025 — Jan 2026',
-    description:
-      'Contributed to production-grade AP & AR finance automation modules. Developed reusable UI components with React.js and Ant Design. Built dynamic tables with pagination, filtering, and infinite scrolling. Integrated frontend with backend REST APIs and improved UI performance.',
-  },
-  {
-    role: 'Web Design Intern',
-    company: 'Quantanics TechServ Pvt Ltd',
-    period: 'Jun 2024',
-    description:
-      'Built responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap. Implemented authentication UI and form validation following best practices. Reduced UI defects through testing and code review practices.',
+      'Architecting and delivering full-stack web and mobile applications end-to-end. Building responsive React.js frontends, designing robust Spring Boot REST services, managing databases with MySQL & MongoDB, and deploying production environments.',
+    highlights: [
+      'Built and delivered full-stack web applications end-to-end, covering architecture, frontend development, backend development, REST APIs, database integration, testing, deployment, and production hosting.',
+      'Developed responsive and scalable React.js applications with reusable components, forms, dashboards, tables, authentication flows, API integrations, and business workflows.',
+      'Designed and implemented backend services using Java and Spring Boot, including RESTful APIs, authentication, business logic, validation, database operations, and frontend-backend integration.',
+      'Worked with MySQL and MongoDB for application data management, database design, and efficient data access workflows.',
+      'Built and delivered mobile applications end-to-end, including application development, backend/API integration, authentication, data handling, testing, deployment, and production delivery.',
+      'Took ownership of applications throughout the complete development lifecycle, from requirements and solution design through implementation, deployment, hosting, maintenance, and production support.',
+      'Deployed and hosted applications in production environments, handling build configuration, environment variables, frontend/backend deployment, API connectivity, and release-related issues.',
+      'Integrated third-party services and APIs based on project requirements and worked on debugging, testing, feature development, and production releases.',
+    ],
   },
 ];
 

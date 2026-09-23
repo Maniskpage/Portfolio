@@ -4,9 +4,9 @@ import { SpotlightCard } from '../components/SpotlightCard';
 import { Download, Code2, Database, Award } from 'lucide-react';
 
 const stats = [
-  { value: '6mo', label: 'Product Internship', detail: 'Fintechy & Quantanics' },
-  { value: '4+', label: 'Shipped Systems', detail: 'SaaS, AI & Microservices' },
-  { value: '200+', label: 'DSA Problems', detail: 'LeetCode & CodeChef' },
+  { value: '2+ Yrs', label: 'Full Stack Exp', detail: 'Akodefy Infotech' },
+  { value: '4+', label: 'Shipped Systems', detail: 'SaaS, Web & Mobile' },
+  { value: '200+', label: 'DSA Problems', detail: 'LeetCode & GFG' },
   { value: '2025', label: 'B.E. Graduate', detail: 'Electronics & Comm (78%)' },
 ];
 
@@ -39,21 +39,21 @@ export function About() {
 
             <div className="space-y-4 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
               <p>
-                Hi, I'm <strong className="text-zinc-900 dark:text-zinc-200">Manikandan S</strong> — a
-                Full Stack Engineer at <strong className="text-accent font-semibold">Jaivexa</strong> with
-                hands-on experience building production SaaS platforms, enterprise workflow engines, and
-                scalable microservices.
+                Hi, I'm <strong className="text-zinc-900 dark:text-zinc-200">Manikandan S</strong> — a{' '}
+                <strong className="text-accent font-semibold">Full Stack Developer</strong> at{' '}
+                <strong className="text-accent font-semibold">Akodefy Infotech</strong> with 2 years of experience
+                building and delivering web and mobile applications end-to-end.
               </p>
               <p>
-                At <strong className="text-zinc-900 dark:text-zinc-200">Fintechy</strong>, I contributed to
-                high-stakes AP & AR finance automation modules — building dynamic, infinite-scrolling
-                data tables with <span className="text-accent font-mono text-xs">React Virtuoso</span>,
-                integrating RESTful endpoints, and slashing UI render bottlenecks.
+                Experienced in application architecture, frontend engineering with React.js, robust backend
+                APIs with Spring Boot, and database management across MySQL & MongoDB. Independently architected
+                and launched <strong className="text-zinc-900 dark:text-zinc-200">Finvo</strong> — a live multi-tenant
+                SaaS invoicing platform with GST compliance, automated PDF generation, and Razorpay billing.
               </p>
               <p>
-                Whether architecting event-driven microservices with Spring Boot & WebFlux or crafting
-                interactive frontends in React & TypeScript, I design for reliability, security, and
-                scale.
+                From building decoupled microservices with Spring WebFlux to crafting high-performance,
+                component-driven web and mobile apps, I take complete ownership of solution design,
+                implementation, deployment, and production hosting.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export function About() {
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
-                Full Stack Engineer @ Jaivexa
+                Full Stack Developer @ Akodefy Infotech
               </span>
             </div>
 
